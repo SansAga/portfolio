@@ -1,0 +1,211 @@
+/* About Me */
+.about-me {
+    text-align: center;
+
+    &__container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
+    }
+
+    &__image-container {
+        width: 40%;
+
+        @include respond(tab-port) {
+            width: 60%;
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__image {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* My Projects */
+.my-projects {
+    text-align: center;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__project {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 3rem;
+
+        &:nth-child(odd) {
+            padding-bottom: 2rem;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 6rem;
+        }
+
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
+
+        @include respond(phone) {
+            margin: 1rem;
+            border: 2px solid $clr-3;
+            border-radius: 2rem;
+        }
+
+    }
+
+    &__text-container {
+        width: 40%;
+        text-align: left;
+
+        @include respond(tab-port) {
+            width: 80%;
+        }
+    }
+
+    &__image-container {
+        width: 30%;
+        margin: 4rem 0;
+
+        @include respond(tab-port) {
+            width: 60%;
+            order: -1;
+        }
+    }
+
+    &__image {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Contact Me */
+.contact-me {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+    @include respond(phone) {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0 !important;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+        align-items: center;
+
+        @include respond(tab-port) {
+            width: 100%;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__text-container {
+        max-width: 45rem;
+        padding: 0 2rem;
+    }
+
+    &__approachable {
+        color: $clr-1;
+    }
+
+    &__link-container {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__icon {
+        color: $clr-white;
+        padding: 1rem;
+    }
+
+    /*
+    /* &__form-container {
+        max-width: 55rem;
+
+        @include respond(tab-port) {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+        }
+    } */
+
+    /* input {
+        margin: 1rem;
+        display: inline-block;
+        padding: 1rem 2rem;
+        font-size: 1.6rem;
+        border-style: none;
+        background-color: $clr-dark-input;
+        color: $clr-white;
+
+        @include respond(tab-port) {
+            display: block;
+        }
+    } */
+
+    /* textarea {
+        margin: 1rem 1rem;
+        font-size: 1.6rem;
+        padding: 1rem 2rem;
+        background-color: $clr-dark-input;
+        color: $clr-white;
+        border-style: none;
+        resize: vertical;
+
+        @include respond(tab-port) {
+            width: 70%;
+            display: inline-block;
+        }
+    } */
+
+    /* &__fname {
+        width: 40%;
+
+        @include respond(tab-port) {
+            width: 50%;
+        }
+    } */
+
+    /* &__lname {
+        width: 40%;
+
+        @include respond(tab-port) {
+            width: 50%;
+        }
+    } */
+
+    /* &__email {
+        width: 60%;
+
+        @include respond(tab-port) {
+            width: 50%;
+        }
+    } */
+
+    /* &__message {
+        display: block;
+    } */
+
+    /* &__submit {
+        cursor: pointer;
+        background-color: $clr-1 !important;
+        color: $clr-black !important;
+        border-radius: 0.5rem;
+        font-family: $ff-primary;
+    } 
+*/
+}

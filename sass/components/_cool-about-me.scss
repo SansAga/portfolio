@@ -1,0 +1,68 @@
+// A component will have style of all the elements related to it even the typography.
+
+.cool-about-me {
+    &__text-container {
+        position: relative;
+        padding-left: 3rem;
+        text-align: left;
+        font-size: 2rem;
+
+        &:not(:last-child) {
+            padding-bottom: 1rem;
+            border-left: 3px solid $clr-2-1;
+
+            @include respond(phone) {
+                padding-bottom: 1rem;
+            }
+        }
+
+        @include respond(phone) {
+            padding-left: 1rem;
+            margin-left: 3rem;
+        }
+    }
+
+    &__circle {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        background-color: $clr-2;
+        position: absolute;
+        box-shadow: 0 0.5rem #fff;
+
+        &--1 {
+            left: -2.15rem;
+        }
+
+        &--2 {
+            left: -1.85rem;
+        }
+    }
+
+    &__text {
+        padding: 0.2rem 0.5rem;
+        list-style: none;
+        margin-bottom: 1rem;
+    }
+
+    &__text-box {
+        margin: 2rem 0 0 3rem;
+
+        @include respond(phone) {
+            margin: 2rem 0 0 2rem;
+        }
+    }
+
+    &__clr-advanced {
+        color: $clr-1;
+    }
+
+    &__clr-intermediate {
+        color: $clr-3;
+    }
+
+    &__clr-beginner {
+        color: $clr-2;
+    }
+}
+
